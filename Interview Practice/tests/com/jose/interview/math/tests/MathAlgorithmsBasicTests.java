@@ -139,4 +139,124 @@ public class MathAlgorithmsBasicTests {
 		// assert
 		Assert.assertEquals(120, result);
 	}
+	
+	@Test
+	public void calculateRomanNumeral_whenInputIsI_return1() {
+		// arrange
+		IMathAlgorithms math = new MathAlgorithmsBasic();
+
+		// act
+		int result = math.calculateRomanNumeral("I");
+
+		// assert
+		Assert.assertEquals(1, result);
+	}
+	
+	@Test
+	public void calculateRomanNumeral_whenInputIsIII_return3() {
+		// arrange
+		IMathAlgorithms math = new MathAlgorithmsBasic();
+
+		// act
+		int result = math.calculateRomanNumeral("III");
+
+		// assert
+		Assert.assertEquals(3, result);
+	}
+	
+	@Test
+	public void calculateRomanNumeral_whenInputIsIV_retur4() {
+		// arrange
+		IMathAlgorithms math = new MathAlgorithmsBasic();
+
+		// act
+		int result = math.calculateRomanNumeral("IV");
+
+		// assert
+		Assert.assertEquals(4, result);
+	}
+	
+	@Test
+	public void calculateRomanNumeral_whenInputIsV_return5() {
+		// arrange
+		IMathAlgorithms math = new MathAlgorithmsBasic();
+
+		// act
+		int result = math.calculateRomanNumeral("V");
+
+		// assert
+		Assert.assertEquals(5, result);
+	}
+	
+	@Test
+	public void calculateRomanNumeral_whenInputIsVIII_return8() {
+		// arrange
+		IMathAlgorithms math = new MathAlgorithmsBasic();
+
+		// act
+		int result = math.calculateRomanNumeral("VIII");
+
+		// assert
+		Assert.assertEquals(8, result);
+	}
+	
+	@Test
+	public void calculateRomanNumeral_whenInputIsXIV_return14() {
+		// arrange
+		IMathAlgorithms math = new MathAlgorithmsBasic();
+
+		// act
+		int result = math.calculateRomanNumeral("XIV");
+
+		// assert
+		Assert.assertEquals(14, result);
+	}
+	
+	@Test
+	public void calculateRomanNumeral_whenInputIsEmptyOrNull_returnNegative1() {
+		// arrange
+		IMathAlgorithms math = new MathAlgorithmsBasic();
+
+		// act
+		int result = math.calculateRomanNumeral("");
+
+		// assert
+		Assert.assertEquals(-1, result);
+	}
+	
+	@Test
+	public void calculateRomanNumeral_whenInputHasInvalidCharacter_returnNegative1() {
+		// arrange
+		IMathAlgorithms math = new MathAlgorithmsBasic();
+
+		// act
+		int result = math.calculateRomanNumeral("Z");
+
+		// assert
+		Assert.assertEquals(-1, result);
+	}
+	
+	@Test
+	public void calculateRomanNumeral_whenInputIsIIII_returnNegative1() {
+		// arrange
+		IMathAlgorithms math = new MathAlgorithmsBasic();
+
+		// act
+		int result = math.calculateRomanNumeral("IIII");
+
+		// assert
+		Assert.assertEquals(-1, result);
+	}
+	
+	@Test
+	public void calculateRomanNumeral_whenInputIsVIIII_returnNegative1() {
+		// arrange
+		IMathAlgorithms math = new MathAlgorithmsBasic();
+
+		// act
+		int result = math.calculateRomanNumeral("VIIII");
+
+		// assert
+		Assert.assertEquals(-1, result);
+	}
 }

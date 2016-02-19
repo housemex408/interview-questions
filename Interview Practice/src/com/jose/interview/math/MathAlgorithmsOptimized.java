@@ -60,4 +60,10 @@ public class MathAlgorithmsOptimized implements IMathAlgorithms {
 		return result;
 	}
 
+	@Override
+	public int calculateRomanNumeral(String string) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
