@@ -1,30 +1,37 @@
 package com.jose.interview.strings;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class StringManipulationOptimized implements StringManipulation {
 
 	public ArrayList<String> printDupes(String input) {
 		
 		ArrayList<String> results = new ArrayList<String>();
+		HashMap<Character, Integer> map = new HashMap<Character, Integer>();
 		
 		if(input == null || input.length() < 2)
 			return results;
 		
-		int inputSize = input.length();
-		
-		String current;
+		int current = 0;
 		input = input.toLowerCase();
 		
-		for(int i = 0; i < inputSize; i++)
+		for(char c : input.toCharArray())
 		{
-			current = input.substring(i, i + 1);
-			
-			if(input.substring(i + 1).indexOf(current) != -1)
+			if(!map.containsKey(c))
 			{
-				results.add(current);
-				System.out.print(current + "");
+				map.put(c, 0);
 			}
+			else
+			{
+				current = map.get(c);
+				map.put(c, ++current);
+			}
+		}
+		
+		for (char key : map.keySet()) {
+			if(map.get(key) > 1)
+				results.add(new String(new char [] { key }));
 		}
 		
 		return results;
