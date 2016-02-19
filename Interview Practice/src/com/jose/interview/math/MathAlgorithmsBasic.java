@@ -13,4 +13,17 @@ public class MathAlgorithmsBasic implements IMathAlgorithms {
 		return result;
 	}
 
+
+	public int factorial(int input) {
+		
+		if (input == 0 || input == 1)
+			return 1;
+		else if (input == 2)
+			return 2;
+		
+		int result = input * factorial(input - 1);
+		
+		return result;
+	}
+
 }
