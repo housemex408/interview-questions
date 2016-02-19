@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import com.jose.interview.strings.StringManipulation;
+import com.jose.interview.strings.IStringManipulation;
 import com.jose.interview.strings.StringManipulationBasic;
 
 import org.junit.Assert;
@@ -16,7 +16,7 @@ public class StringManipulationBasicTests {
 	@Test
 	public void returnDuplicates_whenInputContainsOneDup_returnOne() {
 		// arrange
-		StringManipulation stringM = new StringManipulationBasic();
+		IStringManipulation stringM = new StringManipulationBasic();
 
 		// act
 		ArrayList<String> results = stringM.printDupes("Java");
@@ -28,7 +28,7 @@ public class StringManipulationBasicTests {
 	@Test
 	public void returnDuplicates_whenInputIsNull_returnEmpty() {
 		// arrange
-		StringManipulation stringM = new StringManipulationBasic();
+		IStringManipulation stringM = new StringManipulationBasic();
 
 		// act
 		ArrayList<String> results = stringM.printDupes(null);
@@ -40,7 +40,7 @@ public class StringManipulationBasicTests {
 	@Test
 	public void returnDuplicates_whenInputSizeIsOne_returnEmpty() {
 		// arrange
-		StringManipulation stringM = new StringManipulationBasic();
+		IStringManipulation stringM = new StringManipulationBasic();
 
 		// act
 		ArrayList<String> results = stringM.printDupes(null);
@@ -52,7 +52,7 @@ public class StringManipulationBasicTests {
 	@Test
 	public void returnFirstNonDupe_whenInputContains2NonDupes_returnFirstDupe() {
 		// arrange
-		StringManipulation stringM = new StringManipulationBasic();
+		IStringManipulation stringM = new StringManipulationBasic();
 
 		// act
 		ArrayList<String> results = stringM.returnFirstNonDupe("AAbbcdde");

@@ -3,7 +3,7 @@ package com.jose.interview.strings;
 import java.util.ArrayList;
 import java.util.TreeMap;
 
-public class StringManipulationBasic implements StringManipulation {
+public class StringManipulationBasic implements IStringManipulation {
 
 	// This algorithm runs in O(N) * O(M)
 	public ArrayList<String> printDupes(String input) {

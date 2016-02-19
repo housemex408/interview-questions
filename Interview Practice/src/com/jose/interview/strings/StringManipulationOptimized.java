@@ -3,7 +3,7 @@ package com.jose.interview.strings;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class StringManipulationOptimized implements StringManipulation {
+public class StringManipulationOptimized implements IStringManipulation {
 
 	// This algorithm runs in O(N) + O(N/2) time
 	public ArrayList<String> printDupes(String input) {
