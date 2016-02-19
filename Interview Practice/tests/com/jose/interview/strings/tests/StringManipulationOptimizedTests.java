@@ -47,5 +47,18 @@ public class StringManipulationOptimizedTests {
 		//assert
 		Assert.assertEquals(0, results.size());
 	}
+	
+	@Test
+	public void returnFirstNonDupe_whenInputContains2NonDupes_returnFirstDupe() {
+		// arrange
+		StringManipulation stringM = new StringManipulationBasic();
+
+		// act
+		ArrayList<String> results = stringM.returnFirstNonDupe("AAbbcdde");
+
+		// assert
+		Assert.assertEquals("c", results.get(0));
+		Assert.assertEquals(results.size(), 1);
+	}
 
 }

@@ -1,5 +1,7 @@
 package com.jose.interview.strings.tests;
 
+import static org.junit.Assert.*;
+
 import java.util.ArrayList;
 
 import org.junit.Test;
@@ -13,38 +15,50 @@ public class StringManipulationBasicTests {
 
 	@Test
 	public void returnDuplicates_whenInputContainsOneDup_returnOne() {
-		//arrange
+		// arrange
 		StringManipulation stringM = new StringManipulationBasic();
-		
-		//act
+
+		// act
 		ArrayList<String> results = stringM.printDupes("Java");
-		
-		//assert
+
+		// assert
 		Assert.assertEquals("a", results.get(0));
 	}
-	
+
 	@Test
 	public void returnDuplicates_whenInputIsNull_returnEmpty() {
-		//arrange
+		// arrange
 		StringManipulation stringM = new StringManipulationBasic();
-		
-		//act
+
+		// act
 		ArrayList<String> results = stringM.printDupes(null);
-		
-		//assert
-		Assert.assertEquals(0, results.size());
-	}
-	
-	@Test
-	public void returnDuplicates_whenInputSizeIsOne_returnEmpty() {
-		//arrange
-		StringManipulation stringM = new StringManipulationBasic();
-		
-		//act
-		ArrayList<String> results = stringM.printDupes(null);
-		
-		//assert
+
+		// assert
 		Assert.assertEquals(0, results.size());
 	}
 
+	@Test
+	public void returnDuplicates_whenInputSizeIsOne_returnEmpty() {
+		// arrange
+		StringManipulation stringM = new StringManipulationBasic();
+
+		// act
+		ArrayList<String> results = stringM.printDupes(null);
+
+		// assert
+		Assert.assertEquals(0, results.size());
+	}
+
+	@Test
+	public void returnFirstNonDupe_whenInputContains2NonDupes_returnFirstDupe() {
+		// arrange
+		StringManipulation stringM = new StringManipulationBasic();
+
+		// act
+		ArrayList<String> results = stringM.returnFirstNonDupe("AAbbcdde");
+
+		// assert
+		Assert.assertEquals("c", results.get(0));
+		Assert.assertEquals(results.size(), 1);
+	}
 }
