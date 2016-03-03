@@ -1,10 +1,14 @@
-var Person = function(name)
+var MYApp = MYApp || {};
+
+MYApp.Person = {};
+
+MYApp.Person = function(name)
 {
   this.name = name;
 }
 
-Person.prototype.speak = function(){
+MYApp.Person.prototype.speak = function(){
   return 'Hello, my name is ' + this.name + '!';
 }
 
-module.exports = Person;
+module.exports = MYApp;
