@@ -6,10 +6,13 @@ package com.jose.interview.sorting;
 public class QuickSort {
 
     /**
-     * Time Complexity: O(n^2) - when array is already sorted or all equal elements
-     * Space Complexity: O(n) - since it's an in place sort
+     * Time Complexity: O(n^2) - when array is already sorted or all equal elements or sorted in reverse order
+     * Space Complexity: O(log n) - since it's an in place sort
+     *
      * https://en.wikipedia.org/wiki/Quicksort
      * https://www.youtube.com/watch?v=SLauY6PpjW4
+     *
+     * When to use:  you want to fit all data into memory and you want to get up to O(log n) space
      */
     public void quickSort(int [] input){
         quickSort(input, 0, input.length -1);
